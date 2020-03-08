@@ -1,0 +1,245 @@
+
+body {
+  padding: 0;
+  margin: 0;
+}
+/*html, body, #trapMap {
+  height: 100%;
+  width: 100%;
+}*/
+
+/*
+.btn {
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  height: 38px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-top: 1px solid rgb(115, 168, 57);
+  border-right: 1px solid rgb(115, 168, 57);
+  border-bottom: 1px solid rgb(89, 130, 44);
+  border-left: 1px solid rgb(115, 168, 57);
+  border-radius: 4px 4px 4px 4px;
+  font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 8px 12px;
+}
+.btn-success {
+  background: rgb(115, 168, 57) linear-gradient(rgb(136, 193, 73), rgb(115, 168, 57) 60%, rgb(105, 153, 52)) no-repeat scroll 0% 0% / auto padding-box border-box;
+}
+*/
+.popup-name a {
+  font-size: 1.2em;
+  text-decoration: none;
+  margin-bottom: 0.2em;
+}
+.popup-description a {
+  color: white;
+}
+
+/* Loading spinner */
+.lds-roller {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+  z-index: 99999999;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-dual-ring {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 50%;
+	left: 50%;
+	z-index: 99999999;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Filters */
+#filters {
+	position: absolute;
+	top: 10px;
+	left: 3em;
+	z-index: 99999999;
+	background: #DDD;
+	padding: 0.5em;
+	border-radius: 5px;
+}
+#species {
+}
+#species select {
+  font-size: 20px;
+  overflow: hidden;
+  height: 30px;
+  text-indent: 10px;
+  -webkit-appearance: none;
+}
+
+
+/* leaflet uses heat and width property assigned to the element for it's calculations */
+
+
+#trapMap .leaflet-popup-content .project-name {
+	font-weight: bold;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   -webkit-font-smoothing: antialiased;
+}
+
+/* pop ups */
+.group-popup .leaflet-popup-content-wrapper  {
+	background-color: #f37c5e;
+}
+
+#trapMap .project-link {
+	font-size: .85em;
+	font-weight: bold;
+}
+
+
+/* html legend*/
+#trapMap .leaflet-html-legend {
+/*	background-color: rgba(49,49,49,.85);
+	border: 2px solid #525252 !important;
+	color: #fff; */
+  background-color: rgba(255,255,255,0.7);
+	font-size: 14px;
+  width: auto;
+}
+
+/*#trapMap .leaflet-html-legend label,
+#trapMap .leaflet-html-legend h4>span {
+	color: #fff;
+}*/
+
+#trapMap .leaflet-html-legend h4:hover,
+#trapMap .leaflet-html-legend h4:focus {
+	background: transparent;
+}
+
+#trapMap .leaflet-html-legend p {
+  margin: 0.5em;
+}
+#trapMap .leaflet-html-legend a {
+  background: inherit;
+}
+#trapMap .leaflet-html-legend a:hover {
+  background: white;
+}
+
+/* hex bin */
+.hexbin-hexagon {
+	stroke: rgba(0,0,0,0.3);
+	stroke-width: .5px;
+}
+
+.hexbin-container:hover .hexbin-hexagon {
+	transition: 200ms;
+	stroke: orange;
+	stroke-width: 2px;
+	stroke-opacity: 1;
+}
+
+.hexbin-tooltip {
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: 1px solid black;
+	background-color: white;
+	font: 0.75em 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.hexbin-tooltip ul {
+	padding: 0 0 0 1em;
+	margin: 0.2em 0;
+}
+
+
+.my-traps-label-white {
+  color: white;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.my-traps-label-black {
+  color: black;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.my-traps-tooltip {
+  margin-left: 1.5em;
+}
+
+.leaflet-html-legend {
+  width: auto;
+  padding: 0.1em;
+}
+
+.legend-block {
+  font-size: 1.7em;
+}
+
+.legend-block th,
+.legend-block td {
+  padding-right: 1em;
+}
+
+@media screen and (max-width: 500px) {
+  #trapMap .leaflet-html-legend {
+    font-size: .7em;
+  }
+}
